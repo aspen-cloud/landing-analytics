@@ -6,7 +6,7 @@ import { useCors, useSession } from 'lib/middleware';
 import { getJsonBody, getIpAddress } from 'lib/detect';
 import { secret } from 'lib/crypto';
 import { NextApiRequest, NextApiResponse } from 'next';
-import { Resolver } from 'dns/promises';
+const { Resolver } = require('dns').promises;
 
 export interface CollectRequestBody {
   payload: {
